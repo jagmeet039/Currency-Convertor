@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="icon" href="https://img.icons8.com/windows/32/4a90e2/currency-exchange.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2 class="text-center m-4"><span class="head shadow text-wrap badge bg-light rounded-pill">Currency Convertor</span></h2>
+
+    <div class="container">
+        <div class="main bg-light rounded shadow">
+            <div class="form-group">
+                <label for="oamount">Enter Amount :</label>
+                <input type="text" class="form-control searchBox" placeholder="0.00" id="oamount">
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">From</span>
+                        </div>
+                        <select class="form-control from" id="sel1">
+                            <option value="" disabled selected>Select</option>
+                            <option value="INR">INR(₹)</option>
+                            <option value="USD">USD($)</option>
+                            <option value="EUR">EUR(€)</option>
+                            <option value="GBP">GBP(£)</option>
+                        </select>
+                    </div>  
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">To</span>
+                        </div>
+                        <select class="form-control to" id="sel2">
+                            <option value="" disabled selected>Select</option>
+                            <option value="INR">INR(₹)</option>
+                            <option value="USD">USD($)</option>
+                            <option value="EUR">EUR(€)</option>
+                            <option value="GBP">GBP(£)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-success convert m-2" type="submit">
+                    Convert (INR)
+                </button>
+            </div>
+
+        </div>
+
+        <h2 id="finalAmount" class="text-center m-5"><span class="head shadow text-wrap badge bg-light rounded-pill"><span class="finalValue" style="color:green;">
+        </span></span></h2>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
